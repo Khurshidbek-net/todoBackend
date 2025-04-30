@@ -43,7 +43,7 @@ export class TaskService {
   }
 
   async remove(id: number) {
-    await this.findOne(id); // Ensure it exists
+    await this.findOne(id); 
 
     return this.prisma.task.delete({
       where: { id },
